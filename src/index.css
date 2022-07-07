@@ -1,13 +1,119 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: auto;
+  width:30%;
+  height:100vh;
+  font-family: 'Poppins';
+  background-color: rgb(191, 191, 191);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+header
+{
+  padding: 1em 2em;
+  background-color: #282828;
+  height: 150px;
+  color:white;
+}
+header h1
+{
+  font-size: 30px;
+}
+span
+{
+  color: lightblue;
+}
+p
+{
+  font-size: 20px;
+}
+
+
+.activities-section
+{
+  background-color: white;
+  height:400px;
+  padding: 2em;
+}
+
+h2
+{
+  font-size: 20px;
+}
+
+button
+{
+  border: none;
+  color:white;
+}
+
+button:active
+{
+  transform: scale(.90);
+}
+
+.btn-round
+{
+  margin-top: .75em;
+  background-color: rgb(56, 56, 56);
+  font-size: 15px;
+  width:40px;
+  height:40px;
+  border-radius: 100%;
+}
+
+.activities-header
+{
+  display: flex;
+  gap:10em;
+}
+
+.activities-wrapper
+{
+  margin-top: 1em;
+  display:grid;
+  grid-auto-flow: column;
+  gap:2em;
+  overflow-x:scroll;
+  scrollbar-width: none;
+  padding: 1em 0;
+  padding-right: 2em;
+}
+.activities-wrapper::-webkit-scrollbar
+{
+  display: none;
+}
+
+.activity
+{
+  margin: auto;
+  text-align: center;
+  background-color: #F0F0F0;
+  border-radius: 25%;
+  width: 200px;
+  height: 200px;
+  box-shadow: 0px 2px 6px rgb(189, 189, 189);
+}
+
+.activity-content
+{
+  padding: 0em 0em;
+}
+.activity-content h3
+{
+  text-transform: uppercase;
+}
+
+.days-container
+{
+  padding-left: 2em;
+}
+hr
+{
+  height: 10px;
+  border: none;
+  margin-left: 0;
 }
