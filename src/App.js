@@ -1,8 +1,9 @@
 import {useState} from 'react'
 import Header from './components/Header.js'
 import Activities from './components/Activities.js'
+import AddActivity from './components/AddActivity'
 function App() {
-
+  const [showAddActivity, setShowAddActivity] = useState(false)
   const [activities, setActivities] = useState(
     [
         {
@@ -33,7 +34,8 @@ function App() {
       {/* Header component should be called first - contains Logo, Pfp(add later), and greeting*/}
       <Header/>
       {/* Activities section is next - contains a header (with add button?), and an Activities component?*/}
-      <Activities activities={activities}/>
+      {showAddActivity && <AddActivity/>}
+      <Activities activities={activities} onAdd={()=> setShowAddActivity(!showAddActivity)} showAdd={showAddActivity}/>
     </div>
   );
 }
