@@ -1,6 +1,6 @@
 body {
   margin: auto;
-  width:30%;
+  width:428px;
   height:100vh;
   font-family: 'Poppins';
   background-color: rgb(191, 191, 191);
@@ -75,13 +75,16 @@ button:active
 .activities-wrapper
 {
   margin-top: 1em;
+  margin-right: -2em;
+  margin-left: -2em;
   display:grid;
   grid-auto-flow: column;
-  gap:2em;
+  gap:3em;
   overflow-x:scroll;
   scrollbar-width: none;
   padding: 1em 0;
-  padding-right: 2em;
+  padding-left: 2em;
+  padding-right: 5em;
 }
 .activities-wrapper::-webkit-scrollbar
 {
@@ -140,7 +143,7 @@ form
   justify-content: center;
 }
 
-form input,textarea
+form input,textarea,select
 {
   padding: 1em;
   width: 306px;
@@ -156,6 +159,16 @@ form textarea
 {
   height:80px;
   resize: none;
+
+}
+select
+{
+  height: 20px;
+}
+select::selection
+{
+  z-index: 10;
+  color:black
 }
 
 .create-btn
@@ -164,6 +177,17 @@ form textarea
   color:white;
   width: 100%;
 }
+
+.day-form
+{
+  
+  width: 20%;
+}
+.day-form::placeholder
+{
+  font-size: 15px;
+}
+
 .create-btn:active
 {
   transform: scale(.98);

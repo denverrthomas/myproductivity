@@ -29,12 +29,20 @@ function App() {
         }
     ]
   )
+
+  function addActivity(activity)
+  {
+    const id = Math.floor(Math.random() * 1000) + 1
+    const newActivity = {id,...activity}
+    setActivities([...activities, newActivity])
+  }
+
   return (
     <div className="App">
       {/* Header component should be called first - contains Logo, Pfp(add later), and greeting*/}
       <Header/>
       {/* Activities section is next - contains a header (with add button?), and an Activities component?*/}
-      {showAddActivity && <AddActivity/>}
+      {showAddActivity && <AddActivity addActivity={addActivity}/>}
       <Activities activities={activities} onAdd={()=> setShowAddActivity(!showAddActivity)} showAdd={showAddActivity}/>
     </div>
   );
