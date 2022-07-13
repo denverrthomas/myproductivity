@@ -12,21 +12,22 @@ header
 {
   margin: auto;
   padding: 1em 2em;
-  background-color: #282828;
+  background-image: linear-gradient(to right, #E7F2FE, #E2FDF0);
   height: 150px;
-  color:white;
+  border-radius: 0px 0px 100px 0;
+  color:black;
 }
 header h1
 {
-  font-size: 36px;
+  font-size: 30px;
 }
 span
 {
-  color: rgb(41, 180, 226);
+  color: blue;
 }
 p
 {
-  font-size: 26px;
+  font-size: 20px;
 }
 
 
@@ -224,5 +225,16 @@ form input[type=submit]
   100%
   {
       transform: scale(1);
+  }
+}
+@keyframes scaleOutView
+{
+  0%
+  {
+      transform:scale(1);
+  }
+  100%
+  {
+      transform: scale(0);
   }
 }

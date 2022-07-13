@@ -17,7 +17,7 @@ const Activities = ({activities, onAdd, showAdd}) => {
         </div>
         <div className="activities-wrapper">
     
-            {activities.map((activity) => (
+            {activities.slice(0).reverse().map((activity) => (
             <Activity key={activity.id} activity={activity}/>
             ))}
 
