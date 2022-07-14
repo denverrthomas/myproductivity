@@ -28,9 +28,9 @@ const AddActivity = ({addActivity}) => {
     <div className="add-popup">
       <form className="add-form" onSubmit={onSubmit}>
         <input type="text" placeholder="Activity Name" 
-          value={name} onChange={(e)=> setName(e.target.value)} style={{color:color}}/>
+          value={name} onChange={(e)=> setName(e.target.value)}/>
         <textarea type="text" placeholder="Description"
-          value={description} onChange={(e)=> setDescription(e.target.value)} style={{color:color}}/>
+          value={description} onChange={(e)=> setDescription(e.target.value)}/>
         <label>Color</label>
         <select value={color} onChange={(e)=> setColor(e.target.value)} style={{color:color}}>
           <option value="Black">Black</option>

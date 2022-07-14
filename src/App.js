@@ -18,14 +18,14 @@ function App() {
             name: 'Fitness',
             description: 'Any form of exercise is logged',
             color: 'red',
-            days:[1,2,3,4,5,6,7]
+            days:[3,2,1,3,5,2.3,10]
         },
         {
             id:3,
             name: 'Programming',
             description: 'Any form of programming is logged',
             color: 'purple',
-            days:[1,2,3,4,5,6,7]
+            days:[10,8,1.5,4.3,2.5,3.5,6.7]
         }
     ]
   )
