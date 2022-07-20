@@ -34,12 +34,13 @@ const AddActivity = ({addActivity}) => {
         <label>Color</label>
         <select value={color} onChange={(e)=> setColor(e.target.value)} style={{color:color}}>
           <option value="Black">Black</option>
-          <option value="Crimson">Red</option>
-          <option value="Blue">Blue</option>
+          <option value="#FF5252">Red</option>
+          <option value="#3E1CFF">Blue</option>
           <option value="Orange">Orange</option>
-          <option value="#e75480">Pink</option>
-          <option value="Purple">Purple</option>
-          <option value="Green">Green</option>
+          <option value="#FF00EB">Pink</option>
+          <option value="#A700FF">Purple</option>
+          <option value="#28B471">Green</option>
+          <option value="#0FB5FF">Light Blue</option>
         </select>
         <input className="create-btn"type="submit"  value="Create" style={{backgroundColor: color}}/>
       </form>
