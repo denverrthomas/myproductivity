@@ -17,11 +17,6 @@ export const ActivityHome = () =>{
         navigate('../home')
     }
 
-    function onAddTime()
-    {
-
-    }
-
     return (
         // creating a header for the activity home page
         <div className='ahome_wrapper'>
