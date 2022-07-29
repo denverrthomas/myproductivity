@@ -1,7 +1,7 @@
 import Button from './Button'
 import Activity from './Activity'
 
-const Activities = ({activities, onAdd, showAdd}) => {
+const Activities = ({activities, onAdd, showAdd, removeActivity}) => {
   function checkForActivities()
   {
     if(activities.length < 1)
@@ -18,7 +18,7 @@ const Activities = ({activities, onAdd, showAdd}) => {
         <div className="activities-wrapper">
     
             {activities.slice(0).reverse().map((activity) => (
-            <Activity key={activity.id} activity={activity}/>
+            <Activity key={activity.id} activity={activity} removeActivity={removeActivity}/>
             ))}
 
             {checkForActivities()}

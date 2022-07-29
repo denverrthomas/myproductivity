@@ -38,12 +38,17 @@ export const Home = () => {
       setActivities([...activities, newActivity])
       setShowAddActivity(false)
     }
+
+    function removeActivity(id)
+    {
+      setActivities(activities.filter((activity) => activity.id !== id))
+    }
   
     return (
       <div>
         <Header/>
         {showAddActivity && <AddActivity addActivity={addActivity}/>}
-        <Activities activities={activities} onAdd={()=> setShowAddActivity(!showAddActivity)} showAdd={showAddActivity}/>
+        <Activities activities={activities} onAdd={()=> setShowAddActivity(!showAddActivity)} showAdd={showAddActivity} removeActivity={removeActivity}/>
       </div>
     );
 }

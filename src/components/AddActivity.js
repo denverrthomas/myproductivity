@@ -5,7 +5,7 @@ const AddActivity = ({addActivity}) => {
   const [name, setName] = useState("")
   const [description, setDescription] = useState("")
   const [color, setColor] = useState("Black")
-  const [days, setDays] = useState([1,1,1,1,1,1,1])
+  const [days, setDays] = useState([0,0,0,0,0,0,0])
 
   function onSubmit(e)
   {

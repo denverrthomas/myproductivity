@@ -1,0 +1,110 @@
+.ahome_wrapper
+{
+    margin: auto;
+    width: 100%;
+
+}
+
+.ahome_header
+{
+    margin: auto;
+    padding-top: 1em;
+    padding-inline: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.ahome_header h1
+{
+    padding-right: 2em;
+    font-size: 30px;
+}
+
+.ahome_content_wrapper
+{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 2em;
+}
+
+.week_container
+{
+    margin: auto;
+    height: 400px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.week_data_container
+{
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+
+.day_container
+{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 40px;
+    align-items: center;
+}
+.day_container:hover
+{
+    font-weight: 800;
+    transform: scale(1.2);
+    transition: transform .25s ease-out;
+}
+.day_container:hover .day_time
+{
+    display: block;
+}
+
+.day_bar
+{
+    width: 30px;
+    animation: 1s ease-in 0s 1 barScale;
+}
+
+.day_text
+{
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.day_time
+{
+    display: none;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+@keyframes barScale
+{
+  0%
+  {
+    transform: scaleY(0);
+  }
+  100%
+  {
+    transform: scaleY(1);
+  }
+}
+@keyframes barScaleBack
+{
+  0%
+  {
+    transform: scale(1.2);
+  }
+  100%
+  {
+    transform: scale(1);
+  }
+}
