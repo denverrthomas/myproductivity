@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../../firebase/Firebase';
 // import { useLogin, useNotify, Notification } from 'react-admin';
 
 export const Login = () => {
@@ -17,7 +19,17 @@ export const Login = () => {
         // LOGIC SHOULD GO HERE IN DETERMINING RATHER SUBMIT IS VALID
         // IF IT IS, NEXT CODE WILL RUN REDIRECTING TO PAGE
 
-        navigate('home') // should include a variable id maybe so page knows to load that particular user info?
+        signInWithEmailAndPassword(auth, email, password)
+            .then(userCredential => {
+                // Pass this user object into the home screen
+                const user = userCredential.user;
+                console.log(user);
+                navigate('home') // should include a variable id maybe so page knows to load that particular user info?
+            })
+            .catch(error => {
+                console.error(error);
+                // Display some sort of error pop up message here
+            });
     }
 
     return(
