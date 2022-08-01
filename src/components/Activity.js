@@ -10,6 +10,9 @@ const Activity = ({activity, removeActivity}) => {
     setDeleteMode(!deleteMode)
   };
   
+  const voidClick = () => {
+    // void click
+  }
   const onClick = () => {
     if(deleteMode) // if delete mode is active, then have click delete activity
     {
@@ -28,12 +31,13 @@ const Activity = ({activity, removeActivity}) => {
       shouldPreventDefault: true,
       delay: 500,
   };
-const longPressEvent = useLongPress(onLongPress, onClick, defaultOptions);
+const longPressEvent = useLongPress(onLongPress, voidClick, defaultOptions);
   
   return (
     <div className={`activity deletemode-${deleteMode}`}
       style={{color:activity.color}}
-      {...longPressEvent}>
+      // {...longPressEvent}
+      onClick={onClick}>
 
         {
         deleteMode === false ? // if deleteMode is not on then load content...

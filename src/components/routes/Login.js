@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../../firebase/Firebase';
+import { auth } from '../../firebase/Firebase'
 // import { useLogin, useNotify, Notification } from 'react-admin';
 
 export const Login = () => {
@@ -27,6 +27,7 @@ export const Login = () => {
                 navigate('home') // should include a variable id maybe so page knows to load that particular user info?
             })
             .catch(error => {
+                alert("Please make sure Email and Password are correct.")
                 console.error(error);
                 // Display some sort of error pop up message here
             });

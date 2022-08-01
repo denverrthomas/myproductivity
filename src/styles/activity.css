@@ -17,11 +17,6 @@
   transform: scale(.98);
 }
 
-::selection
-{
-  background: red;
-}
-
 .activity-content
 {
   padding: 0em 0em;

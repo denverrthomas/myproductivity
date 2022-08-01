@@ -4,6 +4,7 @@ import './styles/index.css';
 import './styles/login.css';
 import './styles/activity.css'
 import './styles/activityhome.css'
+import './styles/addtime.css'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';

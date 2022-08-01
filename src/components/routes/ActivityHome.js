@@ -3,18 +3,26 @@ import { useState } from 'react';
 import Button from '../Button';
 import { useNavigate } from 'react-router-dom';
 import Weeks from '../Weeks';
+import AddTime from '../AddTime';
 
 export const ActivityHome = () =>{
 
     const location = useLocation()
     const activity = location.state.activity
     const navigate = useNavigate()
-    const [btnToggle, setBtnToggle] = useState(false)
+    const [showAddTime, setShowAddTime] = useState(false)
+
 
     function onBackClick()
     {
         // When the back button is clicked, it should redirect to last page (do we use history hook for this?)
         navigate('../home')
+    }
+
+    function toggleAddTime()
+    {
+        setShowAddTime(!showAddTime)
+        console.log(showAddTime)
     }
 
     return (
@@ -27,7 +35,8 @@ export const ActivityHome = () =>{
 
             <div className="ahome_content_wrapper">
                 <Weeks activity={activity} />
-                <Button type="regular" text="ADD TIME" onClick={btnToggle && onAddTime}></Button>
+                <Button type="regular" text="ADD TIME" onClick={toggleAddTime} color={'black'}></Button>
+                {showAddTime && <AddTime color={activity.color} toggleAddTime={toggleAddTime}/>}
             </div>
         </div>
 
