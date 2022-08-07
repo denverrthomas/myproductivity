@@ -2,6 +2,7 @@ import {useState} from 'react'
 import Header from '../Header.js'
 import Activities from '../Activities.js'
 import AddActivity from '../AddActivity.js'
+import { useLocation } from 'react-router-dom';
 
 export const Home = () => {
     const [showAddActivity, setShowAddActivity] = useState(false)
@@ -30,6 +31,8 @@ export const Home = () => {
           }
       ]
     )
+
+    const location = useLocation();
   
     function addActivity(activity)
     {
@@ -46,7 +49,7 @@ export const Home = () => {
   
     return (
       <div>
-        <Header/>
+        <Header displayName={JSON.stringify(location)} />
         {showAddActivity && <AddActivity addActivity={addActivity}/>}
         <Activities activities={activities} onAdd={()=> setShowAddActivity(!showAddActivity)} showAdd={showAddActivity} removeActivity={removeActivity}/>
       </div>
