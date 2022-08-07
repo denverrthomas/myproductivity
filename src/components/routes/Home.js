@@ -49,7 +49,7 @@ export const Home = () => {
   
     return (
       <div>
-        <Header displayName={JSON.stringify(location)} />
+        <Header displayName={location.state.user.email} />
         {showAddActivity && <AddActivity addActivity={addActivity}/>}
         <Activities activities={activities} onAdd={()=> setShowAddActivity(!showAddActivity)} showAdd={showAddActivity} removeActivity={removeActivity}/>
       </div>

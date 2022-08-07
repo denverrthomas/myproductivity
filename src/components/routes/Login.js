@@ -21,11 +21,8 @@ export const Login = () => {
 
         signInWithEmailAndPassword(auth, email, password)
             .then(userCredential => {
-                // Pass this user object into the home screen
-                console.log('Signed in')
                 const user = userCredential.user;
-                console.log(user.uid);
-                navigate('/home', { state: user }); // should include a variable id maybe so page knows to load that particular user info?
+                navigate('../home', { state: { user: { uid: user.uid, email: user.email} } }); // should include a variable id maybe so page knows to load that particular user info?
             })
             .catch(error => {
                 alert("Please make sure Email and Password are correct.")
