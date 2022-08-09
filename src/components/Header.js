@@ -1,8 +1,8 @@
-const Header = () => {
+const Header = (props) => {
   return (
     <header>
         <h1><span>My</span>Productivity</h1>
-        <p>Welcome <span>User</span></p>
+        <p>Welcome <span>{props.displayName}</span></p>
     </header>
   )
 }
