@@ -12,21 +12,21 @@ export const Home = () => {
               name: 'Reading',
               description: 'Logged amount of reading (limited to books)',
               color: '#3E1CFF',
-              days:[1,2,3,4,5,6,7]
+              days:[1,2,3.2,1.23,2.112,5.554,2.1]
           },
           {
               id:2,
               name: 'Fitness',
               description: 'Any form of exercise is logged',
               color: '#FF5252',
-              days:[3,2,1,3,5,2.3,10]
+              days:[1.54,2.1,1.87,2.1,1.55,2.3,3.45]
           },
           {
               id:3,
               name: 'Programming',
               description: 'Any form of programming is logged',
               color: '#A700FF',
-              days:[10,8,1.5,4.3,2.5,3.5,6.7]
+              days:[3,4.55,1.5,0,1,3.5,6.7]
           }
       ]
     )

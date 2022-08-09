@@ -3,13 +3,14 @@ import { useEffect } from 'react'
 import Button from './Button'
 
 
-const AddTime = ({color, toggleAddTime}) => 
+const AddTime = ({color, toggleAddTime, addToDay}) => 
 {
     const [time, setTime] = useState(0)
     const [timerOn, setTimerOn] = useState(false)
 
     function timeFinish()
     {
+        addToDay(time)
         setTime(0)
         toggleAddTime()
     }

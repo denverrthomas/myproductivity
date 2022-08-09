@@ -7,6 +7,8 @@ import AddTime from '../AddTime';
 
 export const ActivityHome = () =>{
 
+    const currentDate = new Date()
+    const currentDay = currentDate.getDay()
     const location = useLocation()
     const activity = location.state.activity
     const navigate = useNavigate()
@@ -25,6 +27,12 @@ export const ActivityHome = () =>{
         console.log(showAddTime)
     }
 
+    function addToDay(newTime)
+    {
+        activity.days[currentDay === 0 ? 6 : (currentDay-1)] += (newTime/3600000)
+        console.log(newTime)
+    }
+
     return (
         // creating a header for the activity home page
         <div className='ahome_wrapper'>
@@ -36,7 +44,7 @@ export const ActivityHome = () =>{
             <div className="ahome_content_wrapper">
                 <Weeks activity={activity} />
                 <Button type="regular" text="ADD TIME" onClick={toggleAddTime} color={'black'}></Button>
-                {showAddTime && <AddTime color={activity.color} toggleAddTime={toggleAddTime}/>}
+                {showAddTime && <AddTime color={activity.color} toggleAddTime={toggleAddTime} addToDay={addToDay}/>}
             </div>
         </div>
 

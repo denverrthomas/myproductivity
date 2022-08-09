@@ -45,7 +45,7 @@ const longPressEvent = useLongPress(onLongPress, voidClick, defaultOptions);
               <h3>{activity.name}</h3>
               <div className="days-container">
                   {activity.days.map((day) => (
-                  <hr style={{backgroundColor:activity.color, width: day === 0 ? 1 : (day * 10) + "px"}}/>
+                  <hr style={{backgroundColor:activity.color, width: day === 0 ? 1 : (day * 20) + "px"}}/>
                   ))}
               </div>
           </div>
