@@ -37,7 +37,7 @@ export const ActivityHome = () =>{
         // creating a header for the activity home page
         <div className='ahome_wrapper'>
             <header className="ahome_header" style={{backgroundColor: activity.color, backgroundImage:'none'}}>
-                <Button type="back" text="<" onClick={onBackClick}></Button>
+                {/* <Button type="back" text="<" onClick={onBackClick}></Button> */}
                 <h1 style={{color:'white'}}>{activity.name}</h1>    
             </header>
 

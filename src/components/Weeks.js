@@ -36,6 +36,7 @@ function Weeks({activity}) {
             ))}
         </div>
         <div className="unit-select_container">
+            <h3>Viewing type:</h3>
             <select className="unit-select" onChange={(e)=> setUnit(e.target.value)}>
                 <option value="h">Hours</option>
                 <option value="m">Minutes</option>
