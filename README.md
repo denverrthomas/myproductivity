@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Welcome to the MyProductivity Repo!
+
+MyProductivity is intended to be a productivity management app that lets users create, add to, and track activities.MyProductivity utilizes React JS and other technologies in order to create a positive web app experience! This is an ongoing collaborative project and is still in its infancy, and so the backend is still being worked on.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
